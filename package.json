@@ -1,11 +1,11 @@
 {
-  "name": "github-chrome-fullname",
-  "version": "0.3.9",
-  "description": "Full name instead of UserId for SAP GitHub",
+  "name": "github-chrome-fullname-GEDigital",
+  "version": "0.4.0",
+  "description": "Full name instead of SSO for GE GitHub",
   "main": "build/index.bundle.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cgrail/github-chrome-fullname.git"
+    "url": "https://github.com/dylano/github-chrome-fullname"
   },
   "scripts": {
     "start": "npm run build -- --watch",

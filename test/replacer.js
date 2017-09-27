@@ -12,7 +12,7 @@ function timeout(i: number) {
 }
 
 function createReplacer() {
-	const api = new API3("https://github.wdf.sap.corp/")
+	const api = new API3("https://github.build.ge.com/")
 	return new NodeReplacer(api)
 }
 
@@ -29,7 +29,7 @@ describe("replacer", () => {
 
 	before(async function() {
 		global.fetch = url => {
-			if(url === "https://github.wdf.sap.corp/api/v3/users/d000007") {
+			if(url === "https://github.build.ge.com/api/v3/users/212000000") {
 				return new Response(JSON.stringify({"name": "James Bond"}), {
 					status: 200,
 					headers: {
@@ -79,7 +79,7 @@ describe("replacer", () => {
 
 		it("reacts to changing the text", async function() {
 			const child = document.createElement("a")
-			child.innerHTML = "d000007"
+			child.innerHTML = "212000000"
 			dom.body.children[0].appendChild(child)
 			await timeout(10)
 			assert.strictEqual(child.innerHTML, "James Bond")

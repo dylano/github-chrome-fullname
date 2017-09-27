@@ -25,7 +25,7 @@ describe("restrictor", () => {
 	})
 
 	it("normal element should be allowed to replace", () => {
-		const e = elem`<span class="css-truncate-target" id="simpleUserId">d000007</span>`
+		const e = elem`<span class="css-truncate-target" id="simpleUserId">212000000</span>`
 		assert(restrictor.check(e))
 	})
 
@@ -42,13 +42,13 @@ describe("restrictor", () => {
 		const parent = elem`<div class="commit-meta vcard-username"></div>`
 
 		const target = elem`<a
-				href="/d000007/testGithubSample/commits/master?author=d000007"
+				href="/212000000/testGithubSample/commits/master?author=212000000"
 				aria-label="View all commits by Jesse James"
 				class="commit-author tooltipped tooltipped-s"
 				rel="author"
 				id="vcardUserName"
 				>
-				d000007
+				212000000
 			</a>`
 
 		const time = elem`<time datetime="2015-03-07T01:40:18Z" is="relative-time">
@@ -66,10 +66,10 @@ describe("restrictor", () => {
 			js-selectable-text
 			js-zeroclipboard-target"
 			id="gitCheckoutCommand">
-				git checkout -b d000007-master master
+				git checkout -b 212000000-master master
 				git pull
 				<span class="js-live-clone-url">
-					https://github.corporate/d000007/TestProject.git
+					https://github.corporate/212000000/TestProject.git
 				</span>
 				 master
 		</pre>`
@@ -82,7 +82,7 @@ describe("restrictor", () => {
 
 	it("should allow to replace user id in the comment block of the pull request code tab", () => {
 		const e = elem`<a
-			href="/D012345"
+			href="/212000000"
 			class="author link-gray-dark"
 			id="testAuthorLink">
 				Floki

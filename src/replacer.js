@@ -10,7 +10,7 @@ declare var NodeFilter: any
 
 export class NodeReplacer {
 	_api: API3
-	_idRegex: RegExp = /[di]\d{6}|c\d{7}/gi
+	_idRegex: RegExp = /2\d{8}/gi		// GE SSO format: d{9}
 	_restrictor: Restrictor = new Restrictor
 
 	constructor(api: API3) {

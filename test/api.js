@@ -19,7 +19,7 @@ describe("api", () => {
 		})
 
 		fetch
-			.withArgs("http://github.wdf.sap.corp/api/v3/users/D000000")
+			.withArgs("http://github.build.ge.com/api/v3/users/212000000")
 			.returns(Promise.resolve(res))
 	})
 
@@ -27,11 +27,11 @@ describe("api", () => {
 		fetch.restore()
 	})
 	sinon.spy()
-	const api = new API3("http://github.wdf.sap.corp/")
+	const api = new API3("http://github.build.ge.com/")
 
 	it("getUser", async function() {
-		const user = await api.getUser("D000000")
+		const user = await api.getUser("212000000")
 		assert(user.getName() === "Max Mustermann", "Username must be correct")
-		assert(server.withArgs("http://github.wdf.sap.corp/api/v3/users/D000000").calledOnce)
+		assert(server.withArgs("http://github.build.ge.com/api/v3/users/212000000").calledOnce)
 	})
 })
