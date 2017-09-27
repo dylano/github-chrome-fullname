@@ -6,17 +6,22 @@ Chrome extension to display full-name(s) instead of GE SSO ID in GitHub Enterpri
 
 Installation
 ------------
+Unzip the `dist/ge-github-names.crx` file into a temp directory,
+
+ -or- 
 
 Run:
-* npm install
-* npm run build
-
+```
+npm install
+npm run build
+```
 This will create the unpacked version of the extension in the build/ directory.
+
 
 Then, in Chrome:
 * Open chrome://extensions
 * Turn on developer mode
-* Choose "Load unpacked extension..." and select your build/ folder.
+* Choose "Load unpacked extension..." and select the folder which contains your unzipped/build files.
 
 
 Todo
